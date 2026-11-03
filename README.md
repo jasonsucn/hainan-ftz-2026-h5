@@ -72,11 +72,16 @@
 │  └─ audio/ambient-hainan.mp3
 ├─ docs/                      事实卡 / 核验 / 评审 / 截图
 ├─ tools/                     生图、API、移动端测试页（非交付必需）
-├─ 海南自贸港2026.html        单文件构建产物（推荐直接分发）
-└─ 海南自贸港2026-H5.zip      可分享打包（含单文件 / 素材 / 文档）
+└─ 海南自贸港2026.html        单文件构建产物（推荐直接分发）
 ```
 
+> 可分享的 `…zip` 是本地发布产物，已加入 `.gitignore`，不进入仓库；仓库本身包含完整源码与素材。
+
 ### 打开方式
+
+**在线预览**：https://jasonsucn.github.io/hainan-ftz-2026-h5/
+
+本地：
 
 ```bash
 cd "D:\DeepSeek Harness WorkSpace\海南自贸港2026-H5"
