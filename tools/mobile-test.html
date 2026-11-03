@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:#111;color:#eee;font:12px Consolas,monospace}
+.stage{display:flex;gap:24px;padding:18px}
+.frame{width:390px;height:844px;border:1px solid #555;box-shadow:0 20px 60px rgba(0,0,0,.6);background:#000}
+iframe{width:390px;height:844px;border:0;display:block}
+.meta{max-width:260px;line-height:1.8;color:#bbb}
+</style></head><body>
+<div class="stage">
+  <div class="frame"><iframe id="f"></iframe></div>
+  <div class="meta">
+    <strong>MOBILE TEST / 390 × 844</strong><br>
+    <span id="label"></span><br><br>
+    Query: scene / jump / debug can be passed to the iframe. Use full-page screenshot.
+  </div>
+</div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const src = new URL('/', location.origin);
+  for (const k of ['scene','jump','debug']) if (q.has(k)) src.searchParams.set(k, q.get(k));
+  src.searchParams.set('v', 'mobile-' + Date.now());
+  document.getElementById('f').src = src.toString();
+  document.getElementById('label').textContent = src.toString();
+</script>
+</body></html>

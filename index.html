@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#061311">
+  <meta name="description" content="海南自由贸易港 2026：全岛封关运作第一年。一条线，如何变成一扇门。">
+  <title>过关 · 海南自由贸易港 2026</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="过关 · 海南自由贸易港 2026">
+  <meta property="og:description" content="全岛封关运作第一年：一条线，把海南变成接口。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading" data-theme="dark">
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__top">
+      <span>HAINAN FREE TRADE PORT</span>
+      <span>2026 / FIRST YEAR</span>
+    </div>
+    <div class="loader__center">
+      <p class="loader__eyebrow">ISLAND-WIDE SPECIAL CUSTOMS OPERATIONS</p>
+      <p class="loader__word">正在通过</p>
+      <div class="loader__track"><span id="loaderBar"></span></div>
+    </div>
+    <div class="loader__bottom">
+      <span id="loaderPct">00</span>
+      <span>18.25°N&nbsp;&nbsp;109.51°E</span>
+    </div>
+  </div>
+
+  <header class="hud" id="hud">
+    <a class="brand" href="#overture" aria-label="回到开头">
+      <span class="brand__mark">HN</span>
+      <span class="brand__text">海南自由贸易港<br><em>HAINAN FREE TRADE PORT</em></span>
+    </a>
+    <div class="hud__right">
+      <button class="micro-btn" id="soundBtn" type="button" aria-pressed="false">
+        <span class="micro-btn__dot"></span><span id="soundLabel">SOUND OFF</span>
+      </button>
+      <button class="micro-btn micro-btn--index" id="indexBtn" type="button" aria-expanded="false" aria-controls="indexPanel">
+        <span>INDEX</span><span class="micro-btn__lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="rail" aria-label="章节导航">
+    <div class="rail__line"><span id="railProgress"></span></div>
+    <ol class="rail__list" id="railList">
+      <li><a href="#overture" data-theme="dark"><span>00</span><em>序</em></a></li>
+      <li><a href="#line" data-theme="dark"><span>01</span><em>线</em></a></li>
+      <li><a href="#tide" data-theme="dark"><span>02</span><em>潮</em></a></li>
+      <li><a href="#island" data-theme="dark"><span>03</span><em>岛</em></a></li>
+      <li><a href="#people" data-theme="light"><span>04</span><em>人</em></a></li>
+      <li><a href="#gate" data-theme="dark"><span>05</span><em>门</em></a></li>
+      <li><a href="#coda" data-theme="light"><span>06</span><em>海</em></a></li>
+    </ol>
+  </aside>
+
+  <div class="corner corner--left" aria-hidden="true">
+    <span>DATA / 2026.10</span>
+    <span>FIRST YEAR</span>
+  </div>
+  <div class="corner corner--right" aria-hidden="true">
+    <span id="chapterLabel">00 / 序</span>
+    <span>SCROLL TO PASS</span>
+  </div>
+
+  <main id="app">
+
+    <!-- 00 · OVERTURE -->
+    <section class="scene scene--hero" id="overture" data-theme="dark" aria-labelledby="heroTitle">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="hero__meta">
+        <span class="kicker">HAINAN · CHINA</span>
+        <span class="hero__meta-line"></span>
+        <span class="kicker kicker--muted">2025.12.18 — 2026</span>
+      </div>
+
+      <div class="hero__title-wrap">
+        <p class="hero__vertical">全岛封关运作<br>第一年</p>
+        <h1 class="hero__title" id="heroTitle" aria-label="过关">
+          <span class="hero__char hero__char--fill">过</span><span class="hero__char hero__char--stroke">关</span>
+        </h1>
+        <p class="hero__latin" aria-hidden="true">PASSAGE</p>
+      </div>
+
+      <div class="hero__foot">
+        <p class="hero__claim">一条线，<br>把海南变成接口。</p>
+        <p class="hero__note">封关，不是把岛围起来。<br>是把海关的边界，变成经济的接口。</p>
+      </div>
+
+      <div class="hero__rule" aria-hidden="true"><span></span></div>
+
+      <a class="scroll-cue" href="#line">
+        <span class="scroll-cue__line" aria-hidden="true"></span>
+        <span>SCROLL TO PASS</span>
+      </a>
+    </section>
+
+    <!-- 01 · THE LINE -->
+    <section class="scene scene--line" id="line" data-theme="dark" aria-labelledby="lineTitle">
+      <div class="line-pin">
+        <canvas id="threadCanvas" class="thread-canvas" aria-hidden="true"></canvas>
+        <div class="line-frame">
+          <div class="line-stage" id="lineStage" aria-hidden="true">
+            <span>01 / THE LINE</span>
+            <span>一条线，正在成为一座岛</span>
+          </div>
+
+          <div class="line-copy" id="lineCopy">
+            <span class="kicker">01 / THE LINE</span>
+            <h2 class="display display--line" id="lineTitle">一条线，<br>重新定义海南。</h2>
+            <p class="lede">2025 年 12 月 18 日，海南全岛封关运作。<br>这条线不是墙。它是海南与世界之间，新长出来的接口。</p>
+          </div>
+
+          <div class="policy-stack" id="policyStack" aria-hidden="true">
+            <article class="policy" data-policy="0">
+              <span class="policy__num">A</span>
+              <div>
+                <h3>一线放开</h3>
+                <p>海南与境外之间，货物、资金、人员更自由地流动。</p>
+              </div>
+              <strong>8<small>个对外开放口岸</small></strong>
+            </article>
+            <article class="policy" data-policy="1">
+              <span class="policy__num">B</span>
+              <div>
+                <h3>二线管住</h3>
+                <p>海南与内地之间，精准监管，便捷通行。</p>
+              </div>
+              <strong>10<small>个“二线”口岸</small></strong>
+            </article>
+            <article class="policy" data-policy="2">
+              <span class="policy__num">C</span>
+              <div>
+                <h3>岛内自由</h3>
+                <p>货物、资金、人员、数据在岛内自由流动。</p>
+              </div>
+              <strong>74<small>% 税目零关税</small></strong>
+            </article>
+          </div>
+
+          <div class="line-date" id="lineDate" aria-hidden="true">
+            <span class="line-date__year">2025</span>
+            <span class="line-date__day">12.18</span>
+            <span class="line-date__cap">THE LINE MOVES</span>
+          </div>
+
+          <div class="line-gate" id="lineGate" aria-hidden="true">
+            <p class="line-gate__eyebrow">THE LINE IS A DOOR</p>
+            <p class="line-gate__title">把线，画成门。</p>
+            <p class="line-gate__hint">向右拖动，或继续滚动</p>
+          </div>
+
+          <div class="line-stats" id="lineStats" aria-hidden="true">
+            <div><strong>6,600<sup>+</sup></strong><span>零关税税目</span></div>
+            <div><strong>74<sup>%</sup></strong><span>税目覆盖</span></div>
+            <div><strong>21 → 74</strong><span>开放水平</span></div>
+          </div>
+        </div>
+        <div class="line-drag" id="lineDrag" aria-hidden="true">
+          <span class="line-drag__knob"></span>
+          <span class="line-drag__label">DRAG TO OPEN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · THE TIDE -->
+    <section class="scene scene--tide" id="tide" data-theme="dark" aria-labelledby="tideTitle">
+      <div class="scene__inner tide-grid">
+        <div class="tide-copy">
+          <span class="kicker">02 / THE TIDE</span>
+          <h2 class="display" id="tideTitle">第一年，<br>潮水给出了答案。</h2>
+          <p class="lede">2026 年前三季度，海南货物贸易进出口 <strong>2,854.4 亿元</strong>，同比增长 <strong class="coral">49.8%</strong>。<span class="lede-sub">这不是一条平滑的曲线，是一条仍在抬升的潮位。</span></p>
+          <p class="source-note">数据范围：2026 年 1—9 月。服务贸易为同期口径；经营主体为封关以来至 9 月 17 日。</p>
+
+          <div class="tide-big">
+            <span class="tide-big__num">2,854.4</span>
+            <span class="tide-big__unit">亿元<em>货物贸易 / 2026.01—09</em></span>
+          </div>
+        </div>
+
+        <div class="tide-staff-wrap">
+          <div class="tide-staff" id="tideStaff">
+            <div class="tide-staff__head">
+              <span>THE TIDE STAFF</span><span>2026 / JAN—SEP</span>
+            </div>
+            <div class="tide-staff__body">
+              <div class="tide-staff__scale" aria-hidden="true">
+                <span>3000</span><span>2000</span><span>1000</span><span>0</span>
+              </div>
+              <div class="tide-staff__zone">
+                <span class="tide-staff__water" id="tideWater"></span>
+                <span class="tide-staff__mark" style="--mark: 95%"><i></i><b>2,854.4</b><small>货物贸易</small></span>
+                <span class="tide-staff__mark" style="--mark: 19%"><i></i><b>569.5</b><small>服务贸易</small></span>
+              </div>
+            </div>
+            <div class="tide-staff__foot">
+              <span>↑ 49.8%</span><span>↑ 11.7%</span>
+            </div>
+          </div>
+
+          <div class="tide-list">
+            <div class="tide-row" data-reveal>
+              <span class="tide-row__label">新增经营主体 / 封关以来</span>
+              <strong>23.8<small>万户</small></strong>
+              <span class="tide-row__delta">+34.1%</span>
+            </div>
+            <div class="tide-row" data-reveal>
+              <span class="tide-row__label">其中：新增企业 / 封关以来</span>
+              <strong>18.6<small>万户</small></strong>
+              <span class="tide-row__delta">含于上行</span>
+            </div>
+            <div class="tide-row" data-reveal>
+              <span class="tide-row__label">EF 账户业务量 / 截至 2026.10</span>
+              <strong>9,100<small>亿元+</small></strong>
+              <span class="tide-row__delta">跨境资金</span>
+            </div>
+            <div class="tide-row" data-reveal>
+              <span class="tide-row__label">世界 500 强外资 / 总部企业 / 截至 2026.10</span>
+              <strong>22<small>家</small> / 139<small>家</small></strong>
+              <span class="tide-row__delta">落在岛上</span>
+            </div>
+          </div>
+
+          <p class="tide-quote">“从‘首单’，走向‘常态’。”<span>媒体观察 / 中国经营报</span></p>
+        </div>
+      </div>
+      <div class="tide-wave" aria-hidden="true"><canvas id="tideCanvas"></canvas></div>
+    </section>
+
+    <!-- 03 · THE ISLAND -->
+    <section class="scene scene--island" id="island" data-theme="dark" aria-labelledby="islandTitle">
+      <div class="island__bg" aria-hidden="true"></div>
+      <div class="scene__inner island-grid">
+        <div class="island-head">
+          <span class="kicker">03 / THE ISLAND</span>
+          <h2 class="display" id="islandTitle">岛不大。<br>它装得下<br>四种未来。</h2>
+          <p class="lede">旅游业、现代服务业、高新技术产业、热带特色高效农业。四个主导产业，长在同一座岛上，也长在同一条政策链上。</p>
+          <div class="island-big" aria-hidden="true">4</div>
+        </div>
+
+        <div class="industry-list" id="industryList">
+          <article class="industry" data-index="0">
+            <button type="button" aria-expanded="false">
+              <span class="industry__num">01</span>
+              <span class="industry__name">旅游<em>TOURISM</em></span>
+              <span class="industry__line">1.06 亿人次年接待量（2025）。入境游客 134.4 万人次，同比增长 93.9%。</span>
+              <span class="industry__plus" aria-hidden="true"></span>
+            </button>
+            <div class="industry__detail"><p>从“到海南看海”，到“到海南生活”。免税、医疗、教育、演艺、赛事，把一次旅行拉成一段停留。</p><span class="micro">2025 全年 / 2025.12—2026.05 入境数据</span></div>
+          </article>
+          <article class="industry" data-index="1">
+            <button type="button" aria-expanded="false">
+              <span class="industry__num">02</span>
+              <span class="industry__name">现代服务<em>MODERN SERVICES</em></span>
+              <span class="industry__line">EF 账户业务量超 9,100 亿元。服务贸易 569.5 亿元。</span>
+              <span class="industry__plus" aria-hidden="true"></span>
+            </button>
+            <div class="industry__detail"><p>资金、数据、船舶、飞机、药械——服务贸易的“轻”，正在变成制度型开放的“重”。</p><span class="micro">2026.01—09 / EF 账户为 2026.10 口径</span></div>
+          </article>
+          <article class="industry" data-index="2">
+            <button type="button" aria-expanded="false">
+              <span class="industry__num">03</span>
+              <span class="industry__name">高新技术<em>HIGH-TECH</em></span>
+              <span class="industry__line">商业航天、深海科技、南繁种业、数字经济。</span>
+              <span class="industry__plus" aria-hidden="true"></span>
+            </button>
+            <div class="industry__detail"><p>向天、向海、向种、向数。海南的“高”，不在写字楼里，在发射场、深海和实验室里。</p><span class="micro">2026 年前 10 月商业航天发射 15 次</span></div>
+          </article>
+          <article class="industry" data-index="3">
+            <button type="button" aria-expanded="false">
+              <span class="industry__num">04</span>
+              <span class="industry__name">热带农业<em>TROPICAL AGRICULTURE</em></span>
+              <span class="industry__line">一颗咖啡豆，可以在海南完成“买全球、卖全球”。</span>
+              <span class="industry__plus" aria-hidden="true"></span>
+            </button>
+            <div class="industry__detail"><p>加工增值免关税，让“原料—加工—出岛”变成一条完整的产业闭环。咖啡、椰子、罗非鱼苗，都是这条链上的样本。</p><span class="micro">加工增值 ≥30% 经二线进入内地免征关税</span></div>
+          </article>
+        </div>
+      </div>
+      <div class="island-foot scene__inner">
+        <p>“产业不是招来的，是长出来的。”</p>
+        <div class="island-foot__data">
+          <span><strong>22</strong> 家世界 500 强外资企业</span>
+          <span><strong>139</strong> 家总部企业</span>
+          <span><strong>11</strong> 个加工增值享惠行业</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · THE PEOPLE -->
+    <section class="scene scene--people" id="people" data-theme="light" aria-labelledby="peopleTitle">
+      <div class="people-stamp" aria-hidden="true">
+        <span>VISA-FREE ENTRY</span>
+        <strong>86</strong>
+        <em>HAINAN · 2026</em>
+      </div>
+      <div class="scene__inner people-grid">
+        <div class="people-copy">
+          <span class="kicker">04 / THE PEOPLE</span>
+          <h2 class="display" id="peopleTitle">门开了，<br>人来了。</h2>
+          <p class="lede">86 个国家的人员，可以免签入境海南。一张机票，一次停留，一座岛开始被世界重新看见。</p>
+
+          <div class="people-trio">
+            <div class="people-trio__item">
+              <span class="people-trio__label">VISA-FREE ENTRY</span>
+              <strong>86</strong>
+              <em>个国家</em>
+              <small>截至 2026.05</small>
+            </div>
+            <div class="people-trio__item">
+              <span class="people-trio__label">INBOUND / 2025.12—2026.05</span>
+              <strong>134.4</strong>
+              <em>万人次入境</em>
+              <small>同比 +93.9%</small>
+            </div>
+            <div class="people-trio__item">
+              <span class="people-trio__label">DUTY-FREE / 至 2026.09</span>
+              <strong>275.4</strong>
+              <em>亿元离岛免税</em>
+              <small>同比 +15% / 411.2 万人次</small>
+            </div>
+          </div>
+
+          <p class="people-quote">“人享其行，物畅其流。”</p>
+        </div>
+
+        <div class="board" aria-label="主要客源市场">
+          <div class="board__head">
+            <span>ARRIVAL CARD / 入境卡</span><span>2026</span>
+          </div>
+          <div class="board__rows" id="boardRows">
+            <div class="board__row"><span class="board__city">莫斯科<em>MOSCOW</em></span><span class="board__code">RU</span><span class="board__status"><i></i>免签</span></div>
+            <div class="board__row"><span class="board__city">布拉格<em>PRAGUE</em></span><span class="board__code">CZ</span><span class="board__status"><i></i>免签</span></div>
+            <div class="board__row"><span class="board__city">新加坡<em>SINGAPORE</em></span><span class="board__code">SG</span><span class="board__status"><i></i>免签</span></div>
+            <div class="board__row"><span class="board__city">首尔<em>SEOUL</em></span><span class="board__code">KR</span><span class="board__status"><i></i>免签</span></div>
+            <div class="board__row"><span class="board__city">悉尼<em>SYDNEY</em></span><span class="board__code">AU</span><span class="board__status"><i></i>免签</span></div>
+            <div class="board__row"><span class="board__city">迪拜<em>DUBAI</em></span><span class="board__code">AE</span><span class="board__status"><i></i>免签</span></div>
+          </div>
+          <div class="board__foot"><span>86 COUNTRIES / 220+ TRADING PARTNERS</span><span>SOURCE MARKETS</span></div>
+        </div>
+      </div>
+      <div class="people-foot scene__inner">
+        <p>封关以来，海南与 <strong>220 多个国家和地区</strong>建立贸易往来。人潮的方向，也是开放的方向。</p>
+        <span class="micro">DATA / 2026.09—10</span>
+      </div>
+    </section>
+
+    <!-- 05 · THE GATE -->
+    <section class="scene scene--gate" id="gate" data-theme="dark" aria-labelledby="gateTitle">
+      <div class="gate-pin">
+        <div class="gate__bg" aria-hidden="true"></div>
+        <div class="gate__veil" aria-hidden="true"></div>
+        <canvas id="gateCanvas" class="gate-canvas" aria-hidden="true"></canvas>
+        <div class="gate__kicker"><span class="kicker">05 / THE GATE</span></div>
+        <div class="gate__inner">
+          <h2 class="display display--gate" id="gateTitle">
+            <span class="gate-line"><span>封关，不是关门。</span></span>
+            <span class="gate-line gate-line--coral"><span>是把门，开到更大。</span></span>
+          </h2>
+          <p class="gate__body">一条线，让规则更清晰；一扇门，让流动更自由。<br>海南要做的，不是把世界挡在外面，而是让世界从这里进出。</p>
+          <div class="gate__data">
+            <span><strong>86</strong> 国免签</span>
+            <span><strong>220<sup>+</sup></strong> 贸易伙伴</span>
+            <span><strong>77</strong> 条班轮航线</span>
+            <span><strong>25</strong> 国 / 4 大洲</span>
+          </div>
+          <p class="micro gate__source">免签 2026.05 / 航运 2026.05 洋浦港 / 贸易伙伴为封关以来</p>
+        </div>
+        <div class="gate__mark" aria-hidden="true">关</div>
+        <div class="gate__quote">
+          <span>“平稳有序、成效初显、风险可控、未来可期。”</span>
+          <span>2026.10.18 / 封关十个月发布会</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · THE OPEN SEA -->
+    <section class="scene scene--coda" id="coda" data-theme="light" aria-labelledby="codaTitle">
+      <div class="scene__inner coda-grid">
+        <div class="coda-copy">
+          <span class="kicker">06 / THE OPEN SEA</span>
+          <h2 class="display display--coda" id="codaTitle">第一年，<br>只是开始。</h2>
+          <p class="lede">海南的下一个十年，仍然从这条线开始。<br>线还在。门已经开了。</p>
+
+          <div class="timeline">
+            <span class="timeline__line" aria-hidden="true"></span>
+            <div><time>2025.12.18</time><span>全岛封关运作启动</span></div>
+            <div><time>2026.12.18</time><span>第一年</span></div>
+          </div>
+
+          <button class="seal-btn" id="sealBtn" type="button">
+            <span class="seal-btn__icon" aria-hidden="true">印</span>
+            <span><b>盖下你的关封</b><em>STAMP YOUR PASSAGE</em></span>
+          </button>
+        </div>
+
+        <div class="coda-aside">
+          <div class="coda-aperture" aria-hidden="true">
+            <canvas id="codaCanvas" width="600" height="600"></canvas>
+          </div>
+          <p class="coda-note">本页为纪念性叙事，不构成官方发布。<br>数据截至 2026 年 9 月；个别指标标注至 2026 年 10 月。</p>
+        </div>
+      </div>
+
+      <footer class="site-foot scene__inner">
+        <div class="sources">
+          <span class="micro">SOURCES / 主要来源</span>
+          <a href="https://www.hainan.gov.cn/hainan/gdxw/202606/aa6ca53daf9641018ac6271d173f463a.shtml" target="_blank" rel="noopener">海南省人民政府 · 封关半年成绩单</a>
+          <a href="https://www.hainan.gov.cn/hainan/szfgzbg/202602/1e6254a0a84f4ca990bdcf37948c8496.shtml" target="_blank" rel="noopener">2026 年海南省政府工作报告</a>
+          <a href="https://www.hnftp.gov.cn/xwzx/ywsd/202611/t20261102_4172085.html" target="_blank" rel="noopener">海南自由贸易港 · 封关十个月观察</a>
+          <a href="https://en.hainan.gov.cn/englishsite/Updates/202610/b6b6cd8469164f89ae94d04f2be258e7.shtml" target="_blank" rel="noopener">Hainan FTP · First Three Quarters</a>
+        </div>
+        <div class="credit">
+          <span>DESIGN / CONTENT / CODE</span>
+          <span>DSH AGENT TEAM · 2026</span>
+          <span>DESIGN PARTNER · GPT-6.1-SOL / MAX</span>
+          <span>AI-ASSISTED IMAGERY / MUSIC</span>
+        </div>
+        <p class="site-foot__line">线还在。门已经开了。<span>THE LINE REMAINS. THE GATE IS OPEN.</span></p>
+      </footer>
+    </section>
+  </main>
+
+  <div class="index-panel" id="indexPanel" role="dialog" aria-modal="true" aria-label="章节索引" aria-hidden="true">
+    <button class="index-panel__close" id="indexClose" type="button" aria-label="关闭索引">×</button>
+    <p class="micro">INDEX / 2026</p>
+    <nav>
+      <a href="#overture" data-theme="dark"><span>00</span>序<em>OVERTURE</em></a>
+      <a href="#line" data-theme="dark"><span>01</span>线<em>THE LINE</em></a>
+      <a href="#tide" data-theme="dark"><span>02</span>潮<em>THE TIDE</em></a>
+      <a href="#island" data-theme="dark"><span>03</span>岛<em>THE ISLAND</em></a>
+      <a href="#people" data-theme="light"><span>04</span>人<em>THE PEOPLE</em></a>
+      <a href="#gate" data-theme="dark"><span>05</span>门<em>THE GATE</em></a>
+      <a href="#coda" data-theme="light"><span>06</span>海<em>THE OPEN SEA</em></a>
+    </nav>
+    <p class="index-panel__foot">海南自由贸易港 · 全岛封关运作第一年</p>
+  </div>
+
+  <div class="seal-modal" id="sealModal" role="dialog" aria-modal="true" aria-labelledby="sealTitle" aria-hidden="true">
+    <div class="seal-card">
+      <button class="seal-card__close" id="sealClose" type="button" aria-label="关闭">×</button>
+      <p class="micro">SOUVENIR PASS / 纪念关封</p>
+      <h2 id="sealTitle">你已通过。</h2>
+      <p class="seal-card__sub">把这一刻，留在 2026 年的海南。</p>
+      <div class="seal-canvas-wrap"><canvas id="sealCanvas" width="640" height="640"></canvas></div>
+      <div class="seal-card__actions">
+        <button class="text-btn" id="sealDownload" type="button">保存关封 / SAVE</button>
+        <button class="text-btn text-btn--muted" id="sealAgain" type="button">再盖一次 / AGAIN</button>
+      </div>
+      <p class="seal-card__note">纪念性设计，非官方文件。关封编号由本机时间生成。</p>
+    </div>
+  </div>
+
+  <script src="js/hainan-outline.js"></script>
+  <script src="js/thread.js"></script>
+  <script src="js/seal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

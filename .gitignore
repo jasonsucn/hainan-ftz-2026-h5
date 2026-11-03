@@ -1,0 +1,12 @@
+# local packaging / build artifacts
+*.zip
+tools/_inline-*.js
+tools/test-single.html
+docs/*.raw.json
+docs/*.error.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
