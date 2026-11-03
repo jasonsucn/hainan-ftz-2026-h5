@@ -7,6 +7,8 @@
 **GitHub（公开）**：https://github.com/jasonsucn/hainan-ftz-2026-h5  
 **在线预览**：https://jasonsucn.github.io/hainan-ftz-2026-h5/
 
+![过关 / PASSAGE 首屏](docs/01-hero.png)
+
 ---
 
 ## 一、这是什么
